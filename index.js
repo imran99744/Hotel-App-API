@@ -47,6 +47,10 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 8080;
 
+app.use("/", (req, res) => {
+  res.send("<h2>Welcome to Hotel Management API</h2>");
+});
+
 app.listen(port, () => {
   connect();
   console.log(`Server is running on ${port}`);
